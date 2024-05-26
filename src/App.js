@@ -80,7 +80,7 @@ function SearchBar ({
   );
 }
 
-function FiltableProductTable({products}) {
+function FiltableProductTable({prod}) {
   const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
   return (
@@ -89,7 +89,7 @@ function FiltableProductTable({products}) {
                  inStockOnly={inStockOnly}
                  onFilterTextChange={setFilterText}
                  onInStockOnlyChange={setInStockOnly}/>
-      <ProductTable products={products} 
+      <ProductTable products={prod} 
                     filterText={filterText}
                     inStockOnly={inStockOnly}/>
     </div>
@@ -107,7 +107,7 @@ const PRODUCTS = [
 ];
 
 function App() {
-  return <FiltableProductTable products={PRODUCTS} />;
+  return <FiltableProductTable prod={PRODUCTS} />;
 };
 
 export default App;
