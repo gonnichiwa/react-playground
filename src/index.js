@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Test from './Test';
-import Style from './Style';
-import CssTest from './CssTest';
+import {Test, Style, CssTest} from './fundamental/Fundamental';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
