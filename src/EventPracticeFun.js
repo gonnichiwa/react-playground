@@ -10,7 +10,8 @@ const EventPracticeFun = () => {
     const nextForm = {
         ...form,
         [e.target.name]: e.target.value
-    }
+    } // 객체 복사 {...} = {..., e.target.name: e.target.value}
+    console.log(nextForm);
     setForm(nextForm);
   }
 
