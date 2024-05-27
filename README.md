@@ -2,7 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## On WINDOWS
+
+- download yarn installer.msi  
+https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+
+- add env path as yarn installed path
+
+- check yarn installed  
+```cmd
+\> yarn --version
+```
+
+- start app
+
+```cmd
+\> yarn start
+```
+
+
+## Available Scripts (MACOS)
 
 In the project directory, you can run:
 
