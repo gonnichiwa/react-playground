@@ -10,6 +10,7 @@ import Counter from './Counter';
 import Say from './Say';
 import EventPractice from './EventPractice';
 import EventPracticeFun from './EventPracticeFun';
+import ValidationSample from './Validationsample';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +27,7 @@ root.render(
     <Say/>
     <EventPractice/>
     <EventPracticeFun />
+    <ValidationSample/>
   </React.StrictMode>
 );
 
