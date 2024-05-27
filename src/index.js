@@ -9,6 +9,7 @@ import PropTypeCheck from './PropTypeCheck';
 import Counter from './Counter';
 import Say from './Say';
 import EventPractice from './EventPractice';
+import EventPracticeFun from './EventPracticeFun';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -24,6 +25,7 @@ root.render(
     <Counter/>
     <Say/>
     <EventPractice/>
+    <EventPracticeFun />
   </React.StrictMode>
 );
 

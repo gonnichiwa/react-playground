@@ -14,6 +14,9 @@ class EventPractice extends Component {
         [e.target.name]: e.target.value
     });
   }
+  handleKeyUp = (e) => {
+    if(e.key === 'Enter') {this.handleClick();}
+  }
   render() {
     return (
       <div>
@@ -31,6 +34,7 @@ class EventPractice extends Component {
           placeholder="아무거나입력해보시오"
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyUp={this.handleKeyUp}
         />
         <button
           onClick={this.handleClick}
