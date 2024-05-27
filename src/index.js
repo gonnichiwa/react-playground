@@ -8,6 +8,7 @@ import ArrowComponent from './ArrowComponent';
 import PropTypeCheck from './PropTypeCheck';
 import Counter from './Counter';
 import Say from './Say';
+import EventPractice from './EventPractice';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,6 +23,7 @@ root.render(
     <PropTypeCheck name={"3"}>PropTypeCheckChildren</PropTypeCheck> {/* name attr proptype check */}
     <Counter/>
     <Say/>
+    <EventPractice/>
   </React.StrictMode>
 );
 
