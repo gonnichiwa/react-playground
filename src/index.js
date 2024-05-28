@@ -11,6 +11,7 @@ import Say from './Say';
 import EventPractice from './EventPractice';
 import EventPracticeFun from './EventPracticeFun';
 import ValidationSample from './Validationsample';
+import ScrolllBoxApp from './ScrollBoxApp';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,8 @@ root.render(
     <EventPractice/>
     <EventPracticeFun />
     <ValidationSample/>
+    <ScrolllBoxApp/>
+    <div style={{height: '100px'}}></div>
   </React.StrictMode>
 );
 
