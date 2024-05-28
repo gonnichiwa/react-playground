@@ -16,6 +16,7 @@ import ScrolllBoxApp from './ScrollBoxApp';
 import IterationSample from './IterationSample';
 
 import reportWebVitals from './reportWebVitals';
+import LifeCycleSampleApp from './LifeCycleSampleApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +37,7 @@ root.render(
     <div style={{height: '100px'}}></div>
 
     <IterationSample/>
+    <LifeCycleSampleApp/>
   </React.StrictMode>
 );
 
