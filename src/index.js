@@ -12,6 +12,9 @@ import EventPractice from './EventPractice';
 import EventPracticeFun from './EventPracticeFun';
 import ValidationSample from './Validationsample';
 import ScrolllBoxApp from './ScrollBoxApp';
+
+import IterationSample from './IterationSample';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +34,8 @@ root.render(
     <ValidationSample/>
     <ScrolllBoxApp/>
     <div style={{height: '100px'}}></div>
+
+    <IterationSample/>
   </React.StrictMode>
 );
 
