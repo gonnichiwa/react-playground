@@ -1,24 +1,17 @@
-import React, { useReducer } from 'react';
+import React from 'react';
+import TextBoxUseInputs from './TextBoxUseInputs';
 
-function reducer(state, target) {
-    return {
-        ...state,
-        [target.name]: target.value
-    }
-}
 const TextBoxReducer = () => {
-    const [state, dispatch] = useReducer(reducer, {
+    const [state, onChange] = TextBoxUseInputs({
         name: '',
         nickname: ''
     });
-    const onChange = (e) => {
-        dispatch(e.target);
-    };
+    const {name, nickname} = state;
     return (
         <>
         <div>
-            <h1>(TextBoxReducer)이름:{state.name}</h1>
-            <h1>(TextBoxReducer)닉네임:{state.nickname}</h1>
+            <h1>(TextBoxReducer)이름:{name}</h1>
+            <h1>(TextBoxReducer)닉네임:{nickname}</h1>
         </div>
         <div>
             <input type='text' name='name' placeholder='name' onChange={onChange}/>
