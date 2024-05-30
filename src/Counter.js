@@ -1,44 +1,18 @@
-import {Component} from 'react';
+import React, { useState } from 'react';
 
-class Counter extends Component {
-    state = { // state 초기값
-        number: 0, // max: 약 9000조
-        fixedNumber: 999
+const Counter = () => {
+    const [count, setCount] = useState(0);
+    const onClick = (e) => {
+        if (e.target.name === 'plus') setCount(count+1);
+        if (e.target.name === 'minus') setCount(count-1);
     }
-    render() {
-        const { number, fixedNumber } = this.state;
-        return (
-            <div>
-                <h1>{number}</h1>
-                <h2>바뀌지 않는 값: {fixedNumber}</h2>
-                <button onClick={
-                    () => {
-                        this.setState(prevState => {
-                            return {
-                                number: prevState.number + 1
-                            }
-                        });
-                        this.setState(prevState => (
-                            {number: prevState.number + 1}
-                        ));
-                        console.log('called +1 +1, ');
-                        console.log(this.state);
-                    }
-                }>+1</button>
-                <button onClick={
-                    () => {
-                        this.setState(
-                            {number: number - 1},
-                            () => {
-                                console.log('called -1');
-                                console.log(this.state);
-                            }
-                        );
-                    }
-                }>-1</button>
-            </div>
-        );
-    }
-}
+    return (
+        <div>
+            <h1>{count}</h1>
+            <button onClick={onClick} name="plus">+1</button>
+            <button onClick={onClick} name="minus">-1</button>
+        </div>
+    );
+};
 
 export default Counter;

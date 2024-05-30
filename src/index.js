@@ -14,6 +14,7 @@ import ValidationSample from './Validationsample';
 import ScrolllBoxApp from './ScrollBoxApp';
 
 import IterationSample from './IterationSample';
+import TextBoxUseState from './TextBoxUseState';
 
 import reportWebVitals from './reportWebVitals';
 import LifeCycleSampleApp from './LifeCycleSampleApp';
@@ -29,6 +30,7 @@ root.render(
     <ArrowComponent name="ArrowComponent : name From super">index.js의 ArrowComponent태그 사이에 주어짐.(children)</ArrowComponent>
     <PropTypeCheck name={"3"}>PropTypeCheckChildren</PropTypeCheck> {/* name attr proptype check */}
     <Counter/>
+    <TextBoxUseState/>
     <Say/>
     <EventPractice/>
     <EventPracticeFun />
