@@ -14,6 +14,11 @@ https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
 \> yarn --version
 ```
 
+- install libs package.json
+```cmd
+\> npm install --save-dev
+```
+
 - start app
 
 ```cmd
