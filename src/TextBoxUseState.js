@@ -15,7 +15,7 @@ const TextBoxUseState = () => {
             console.log('cleanup');
             console.log('name');
         }
-    }, []); 
+    }); 
 
     const onChange = (e) => {
         setState({

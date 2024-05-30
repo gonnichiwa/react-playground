@@ -18,6 +18,7 @@ import TextBoxUseStateApp from './TextBoxUseStateApp';
 
 import reportWebVitals from './reportWebVitals';
 import LifeCycleSampleApp from './LifeCycleSampleApp';
+import CounterReducer from './CounterReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +31,7 @@ root.render(
     <ArrowComponent name="ArrowComponent : name From super">index.js의 ArrowComponent태그 사이에 주어짐.(children)</ArrowComponent>
     <PropTypeCheck name={"3"}>PropTypeCheckChildren</PropTypeCheck> {/* name attr proptype check */}
     <Counter/>
+    <CounterReducer/>
     <Say/>
     <EventPractice/>
     <EventPracticeFun />
