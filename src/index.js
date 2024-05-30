@@ -19,6 +19,7 @@ import TextBoxUseStateApp from './TextBoxUseStateApp';
 import reportWebVitals from './reportWebVitals';
 import LifeCycleSampleApp from './LifeCycleSampleApp';
 import CounterReducer from './CounterReducer';
+import Average from './Average';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,6 +46,7 @@ root.render(
     <hr/>
     <br/>
     <TextBoxUseStateApp/>
+    <Average/>
   </React.StrictMode>
 );
 
