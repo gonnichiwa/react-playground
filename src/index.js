@@ -46,6 +46,9 @@ root.render(
     <hr/>
     <br/>
     <TextBoxUseStateApp/>
+    <br/>
+    <hr/>
+    <br/>
     <Average/>
   </React.StrictMode>
 );
