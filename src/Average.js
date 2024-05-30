@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react"; // memoization의 memo
 
 const getAverage = (list) => {
     if(list.length === 0) return 0;
@@ -20,6 +20,7 @@ const Average = () => {
     setValue("");
     inputRef.current.focus();
   };
+  const avg = useMemo(() => getAverage(list), [list]); // list의 갱신있을때만 () => getAverage(list) 호출하라.
   return (
     <div>
       <input ref={inputRef} type="text" value={value} onChange={onChange} />
@@ -30,7 +31,7 @@ const Average = () => {
         ))}
       </ul>
       <div>
-        평균값: {getAverage(list)} {/** input이 onChange될때마다 getAverage호출됨 */}
+        평균값: {avg}
       </div>
     </div>
   );
