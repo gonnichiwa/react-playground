@@ -11,7 +11,11 @@ const TextBoxUseState = () => {
     useEffect(() => {
         console.log('렌더링이 완료되었습니다');
         console.log(state);
-    }, [state.name]); 
+        return () => { // componentWillUnMount || componentWillUpdate 일때 수행
+            console.log('cleanup');
+            console.log('name');
+        }
+    }, []); 
 
     const onChange = (e) => {
         setState({
