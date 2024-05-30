@@ -5,10 +5,13 @@ const TextBoxUseState = () => {
         name: '',
         nickname: ''
     });
+    // useEffect : componentDidMount + componentDidUpdate
+    // componentDidMount만 실행효과 : useEffect(func, []);
+    // 특정 state만 componentDidUpdate효과 : useEffect(func, [state]) 
     useEffect(() => {
         console.log('렌더링이 완료되었습니다');
         console.log(state);
-    }); // componentDidMount + componentDidUpdate
+    }, [state.name]); 
 
     const onChange = (e) => {
         setState({
