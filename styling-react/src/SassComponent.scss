@@ -1,4 +1,4 @@
-@import './styles/utils.scss';
+@import 'utils.scss'; // /src/styles 안에 있는 sass|scss 찾아라, see webpack.config.js :522
 
 .SassComponent {
     display: flex;

@@ -513,12 +513,16 @@ module.exports = function (webpackEnv) {
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
-                  modules: {
-                    mode: 'icss',
-                  },
                 },
                 'sass-loader'
-              ),
+              ).concat({
+                loader: require.resolve("sass-loader"),
+                options: {
+                  sassOptions: {
+                    includePaths: [paths.appSrc + "/styles"], // /src/styles 안에 있는 sass|scss 찾아라
+                  }
+                }
+              }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
               // Remove this when webpack adds a warning or an error for this.
