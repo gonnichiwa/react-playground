@@ -520,7 +520,8 @@ module.exports = function (webpackEnv) {
                 options: {
                   sassOptions: {
                     includePaths: [paths.appSrc + "/styles"], // /src/styles 안에 있는 sass|scss 찾아라
-                  }
+                  },
+                  additionalData: "@import 'utils';" // default import 처리
                 }
               }),
               // Don't consider CSS imports dead code even if the
