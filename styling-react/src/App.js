@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <SassComponent/>
-      <MyCssModule/>
+      <MyCssModule inverted={true}/>
     </div>
   );
 }
