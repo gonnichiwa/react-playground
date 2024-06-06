@@ -1,5 +1,22 @@
 import styled, {css} from 'styled-components';
 
+const sizes = {
+    desktop: 1024,
+    tablet: 768 // px
+};
+
+// 위 sizes 객체에 따라 자동으로 media 쿼리 함수를 만들어 줌.
+// 참고 : https://www.styled-components.com/docs/advanced#media-templates
+const media = Object.keys(sizes).reduce((acc, label) => {
+    acc[label] = (...args) => {css`
+    @media (max-width: ${sizes[label] / 16}em) {
+        ${css(...args)}
+    }
+    `; console.log(...args, sizes[label]); } // ['width: 768px;', raw: Array(1)] 1024
+    // 이해를 위해 ... src/example/tagged-template-literal.js 참조
+    return acc;
+}, {});
+
 const Box = styled.div`
   /* props로 넣어 준 값을 직접 전달해 줄 수 있음. */
   background: ${props => props.color || 'blue'};
@@ -12,12 +29,8 @@ const Box = styled.div`
   */
   width: 1024px;
   margin: 0 auto;
-  @media(max-width: 1024px) {
-    width: 768px;
-  }
-  @media(max-width: 768px) {
-    width: 100%;
-  }
+  ${media.desktop`width: 768px;`}
+  ${media.tablet`width: 100%;`}
 `;
 
 const Button = styled.button`
@@ -31,7 +44,7 @@ const Button = styled.button`
  box-sizing: border-box;
  font-size: 1rem;
  font-weight: 600;
-;
+
 
 /* & 문자 사용하여 Sass처럼 자기자신 선택 가능 */
 &:hover {
