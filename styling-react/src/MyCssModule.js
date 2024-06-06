@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './MyCssModule.module.css';
+import styles from './MyCssModule.module.scss';
 
 const cx = classNames.bind(styles); // styles에서 클래스(.bla) 받아옴
 
