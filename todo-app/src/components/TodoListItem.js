@@ -10,8 +10,8 @@ const TodoListItem = ({ todo }) => {
     const { text, checked } = todo;
     return (
         <div className='TodoListItem'>
-            <div className='checkbox'>
-                <MdCheckBoxOutlineBlank />
+            <div className={cn('checkbox', { checked })}> { /* true : checkbox checked */}
+                {checked ? <MdCheckBox/> : <MdCheckBoxOutlineBlank/>}
                 <div className='text'>{text}</div>
             </div>
             <div className='remove'>
