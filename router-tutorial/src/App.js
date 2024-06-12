@@ -9,8 +9,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
-      <Route path='/profile/:username' element={<Profile/>}/> {/* /profile/:username 하면 */}
-                                                              {/* Profile.js 의 useParams에서도 params.username으로 받아야 함. */}
+      <Route path='/profiles/:username' element={<Profile/>}/> {/* /profile/:username 하면 */}
+                                                               {/* Profile.js 의 useParams에서도 params.username으로 받아야 함. */}
     </Routes>
   );
 }
