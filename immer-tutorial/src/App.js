@@ -14,12 +14,12 @@ const App = () => {
       const {name, value} = e.target; // e.target : <input name = 'username'/>
                                       //                  \name/  \__value__/
       setForm(
-        produce(form, draft => { // form  : useState에서 쓰고 있는 form
+        produce(draft => { // form  : useState에서 쓰고 있는 form
           draft[name] = value;   // draft : 복사된 객체 전체
         })
       );
     },
-    [form]
+    []
   );
 
   const onSubmit = useCallback(
@@ -32,7 +32,7 @@ const App = () => {
       };
       // array 새항목 등록
       setData(
-        produce(data, draft => { // data : useState에 쓰고 있는 data
+        produce(draft => { // data : useState에 쓰고 있는 data
           draft.array.push(info);// draft: 복사된 객체 전체
         })
       );
@@ -43,19 +43,19 @@ const App = () => {
       });
       nextId.current += 1;
     },
-    [data, form.name, form.username]
+    [form.name, form.username]
   );
 
   // 항목을 삭제
   const onRemove = useCallback(
     id => {
       setData(
-        produce(data, draft => {                                                // data : useState의 데이터
+        produce(draft => {                                                // data : useState의 데이터
           draft.array.splice(draft.array.findIndex(info => info.id === id), 1); // id 1에서 1개 지워라
         })
       );
     },
-    [data]
+    []
   );
 
   return (
