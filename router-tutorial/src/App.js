@@ -7,6 +7,7 @@ import Articles from './pages/Articles';
 import Article from './pages/Article';
 import ArticleText from './pages/ArticleText';
 import Layout from './pages/Layout';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path=':id' element={<Article/>}/>
         <Route path=':id' element={<ArticleText/>}/> {/** Articles.js에서 Outlet 해줘도 안보임. child(0)만 들어갈수있음. */}
       </Route>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
   );
 }
