@@ -20,6 +20,9 @@ const Home = () => { // 본 Home.js 파일이 pages/ 경로에 있는데,
                 <li>
                     <Link to="/profiles/void">존재하지 않는 프로필</Link>
                 </li>
+                <li>
+                    <Link to="/articles">게시글 목록</Link>
+                </li>
             </ul>
         </div>
     );
